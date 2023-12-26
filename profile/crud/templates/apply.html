@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container">
+  <form class="applyform" action="/apply" method="post">
+    {% csrf_token %}
+    <h2 class="mb-4">University Application Form</h2>
+    {% if error %}
+    <div class="alert alert-danger" role="alert">
+      {{error}}
+    </div>
+    {% endif %}
+    <!-- Personal Information -->
+    <div class="mb-3">
+      <label class="form-label">First Name:</label>
+      <input type="text" class="form-control" value="{{value.firstname}}" name="firstname">
+      <label class="form-label">Last Name:</label>
+      <input type="text" class="form-control" value="{{value.lastname}}" name="lastname">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Country</label>
+      <input type="text" class="form-control" value="{{value.country}}" placeholder="Enter Country Name" name="country">
+    </div>
+    <div class="mb-3">
+      <label for="optionalField" class="form-label">City</label>
+      <select class="form-select" name="city">
+        <option value="{{value.city}}" selected>--Select City--</option>
+        <option value="Karachi">Other City</option>
+        <option value="Karachi">Karachi</option>
+        <option value="Lahore">Lahore</option>
+        <option value="Islamabad">Islamabad</option>
+        <option value="Rawalpindi">Rawalpindi</option>
+        <option value="Faisalabad">Faisalabad</option>
+        <option value="Multan">Multan</option>
+        <option value="Peshawar">Peshawar</option>
+        <option value="Quetta">Quetta</option>
+        <option value="Sialkot">Sialkot</option>
+        <option value="Gujranwala">Gujranwala</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" value="{{value.email}}" class="form-control" id="email" name="email">
+    </div>
+
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone Number:</label>
+      <input type="tel" value="{{value.phone}}" class="form-control" id="phone" name="phone">
+    </div>
+    <div class="mb-3">
+      <label for="optionalField" class="form-label">Select Campus are you applying</label>
+      <select class="form-select" value="{{value.campus}}" name="campus">
+        <option value="campus" selected>--Select Campus--</option>
+        <option value="option2">Sialkot</option>
+        <option value="option3">Lahore</option>
+      </select>
+    </div>
+    <!-- Academic Information -->
+
+    <div class="mb-3">
+      <label for="previousEducation" class="form-label">Previous Education:</label>
+      <textarea class="form-control" value="{{value.previousEducation}}" name="previousEducation" rows="4">
+      </textarea>
+    </div>
+
+    <!-- Additional Information -->
+    <div class="mb-3">
+      <label for="extracurricularActivities" class="form-label">Extracurricular Activities:</label>
+      <textarea class="form-control" value="{{value.extracurricularActivities}}" id="extracurricularActivities"
+        name="extracurricularActivities" rows="4">
+      </textarea>
+    </div>
+    <!---Password-->
+    <div class="mb-3">
+      <label class="form-label">Password:</label>
+      <input type="password" class="form-control" name="password">
+      <label class="form-label">Confirm Password:</label>
+      <input type="password" class="form-control" name="confirm_password">
+    </div>
+    <!----  I have already Account -->
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary" href="/login">Register</button>
+  </form>
+</div>
+</div>
+<link rel="stylesheet" href="{% static 'profile1/css/apply.css' %}">
+{% endblock %}

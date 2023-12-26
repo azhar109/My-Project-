@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'profile1/css/login.css' %}">
+</head>
+
+<body class="body1">
+    <div>
+        <form class="formlogin" method="post" action="/login">
+            {% csrf_token %}
+            <h2>Sign In</h2>
+            {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{error}}
+            </div>
+            {% endif %}
+            <div class="mb-3">
+                <label class="form-label">Email:</label>
+                <input type="email" class="form-control" value="{{value.firstname}}" name="email">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" name="password">
+            </div>
+            <button type="submit" href="" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+</body>
+{% endblock %}

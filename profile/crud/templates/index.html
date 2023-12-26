@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+  <link rel="stylesheet" href="/static/profile1/css/index1.css">
+</head>
+
+
+<body>
+  <div class="container-fluid">
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class=" carousel-item active">
+          <img src="static/profile1/images/home3.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block ">
+            <h5>
+              <p>Secure Your Future</p>
+            </h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quas dicta harum nam animi repellat aliquam
+              veritatis saepe aliquid beatae.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="static/profile1/images/home2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Libarary</h5>
+            <p>bLorem ipsum dolor, sit amet consectetur adipisicing elit. Quae perspiciatis numquam quis ipsa nesciunt
+              vel
+              veniam et perferendis, cum nihil hic laborum, assumenda dolorem aut.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="static/profile1/images/home1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Department</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam temporibus porro saepe aliquid perferendis
+              doloremque debitis iure natus repellat sed necessitatibus, illum quisquam est quo!</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!---first div Our mission-->
+  <div class="row maindiv">
+    <div class="col-lg-5 mx-auto textdiv">
+      <h1 class="indexh1">
+        Our Mission
+      </h1>
+      <ul>
+        <li class="liitem">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Cumque odit et, illo omnis blanditiis adipisci? </li>
+        <li class="liitem">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Voluptatum id error minima laborum dignissimos ut.</li>
+        <li class="liitem">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Deleniti distinctio sit eveniet tempora itaque?</li>
+        <input class="btn btn-info" type="submit" id="butn" value="Read More-->">
+      </ul>
+    </div>
+    <div class="col-lg-5 mx-auto">
+      <div class="row mx-auto">
+        <img src="static/profile1/images/home4.jpg" class="" alt="">
+      </div>
+    </div>
+  </div>
+
+
+  <!---Second div-->
+
+  <div class="row container-fluid1 ">
+    <div class="col-lg-5 mx-auto">
+      <div class="row mx-auto">
+        <img src="/static/profile1/images/picture.jpg" alt="">
+      </div>
+    </div>
+    <div class="col-lg-5 ms-auto">
+      <h1 class="row">
+        Department
+      </h1>
+      <ul>
+        <li class="liitem">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, similique? </li>
+        <li class="liitem">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Voluptatum id error minima laborum dignissimos ut.</li>
+        <li class="liitem">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Deleniti distinctio sit?</li>
+        <input class="btn btn-info" type="submit" id="butn" value="Read More-->">
+      </ul>
+    </div>
+  </div>
+
+  <!--- Admisssion Link -->
+  <div class="container-fluid applydiv">
+    <div class="imagediv">
+      <img id="imageid" src="static/profile1/images/home5.jpg" alt="">
+      <div class="overlay-text">
+        <h1>
+          <p>Fall 2023 Admissions Open Now</p>
+        </h1>
+        <form action="/apply">
+          <p><input class="btn btn-info" type="submit" value="APPLY" name="" id=""></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+{% endblock %}
